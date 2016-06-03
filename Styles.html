@@ -1,0 +1,157 @@
+<style type="text/css">
+/* Background pattern from subtlepatterns.com */
+
+html {
+    font-size: 13px;
+}
+
+body {
+  background-color: #98b7e3;
+  background-image: url('//raw.githubusercontent.com/takvol/GoogleScriptForm/master/background.png');
+  background-repeat: repeat;
+  background-position: left top;
+  font-family: "Roboto", arial, sans-serif;;
+  color: rgb(119,119,119);
+  font-weight: 400;
+  font-size: 1.080rem;
+  font-style: normal;
+  line-height: normal;
+  padding: 0 .75rem;
+}
+
+.form-container {      
+  margin: 0.75rem auto;
+  max-width: 700px;
+  min-width: 280px;
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 2px;
+  border: 1px solid rgb(212,212,212);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.form-content {
+  padding: 3rem;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+.q-title {
+  color: rgb(80,80,80);
+  font-weight: 700;
+  font-size: 1.100rem;
+  font-style: normal;
+  display:inline-block;
+}
+
+.q-desc {
+  margin-top: .25rem;
+  color: #777;
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+.scale-label {
+  font-size: 1.000rem;
+  width: 20%;
+}
+
+form-title {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 400;
+  font-size: 2.460rem;
+  font-style: normal;
+}
+
+.form-footer,
+.form-heading {
+  padding-top: 2.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.form-footer {
+  border-top:1px solid #ddd;
+  padding-bottom: 2.5rem;
+}
+
+.required-asterisk {
+  color: rgb(196,59,29);
+}
+
+input[type='text'], input:not([type]), textarea {
+  font-size: 1.000rem;
+}
+
+div.upload {
+  position:relative;
+  display: inline-block;
+}
+
+.js .upload input {
+  position:absolute;
+  top: 0;
+  left: 0;
+  display: inline-block !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+}
+
+.no-js .upload input + label,
+.no-js .upload input + .button {
+    display: none;
+}
+
+.upload label {
+  width: 120px;
+  display:inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.upload input:focus + .button,
+.upload input.has-focus + .button {
+  -moz-box-shadow: inset 0 0 0 1px #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.upload input:active + .button {
+  background: -moz-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background: -ms-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background: -o-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background: linear-gradient(top, #f8f8f8, #f1f1f1);
+  border: 1px solid #ccc;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  color: #111;
+}
+
+.upload input:hover + .button {
+  background: -moz-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background: -ms-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background: -o-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background: linear-gradient(top, #f8f8f8, #f1f1f1);
+  border: 1px solid #c6c6c6;
+  color: #111;
+  text-decoration: none;
+}
+
+textarea {
+  width: 70%;
+}
+
+</style>
