@@ -41,7 +41,7 @@ function uploadFiles(form) {
     row = sheet.getSheetByName(SHEET_NAME).appendRow([date, id, name, heap, mirror, world, cloud, url, image]).getLastRow();
     sheet.getSheetByName(SHEET_NAME).setRowHeight(row, 100);
     
-    respond = HtmlService.createHtmlOutputFromFile("Respond.html").getContent();
+    respond = "Thanks! Your response has been recorded.";
   } catch(e) {
     var message = {error:e.toString(), date:date, id:id, name:name, heap:heap, mirror:mirror, world:world, cloud:cloud,
                    file:file, url:url, image:image, folder:folder, sheet:sheet, row:row};
