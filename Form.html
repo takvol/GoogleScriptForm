@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- In this project was used info from file inputs styling by Osvaldas Valutis. Check out "http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/" -->
+<html class="no-js">
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+    <?!= include('Styles.html'); ?>
+  </head>
+  
+  <body>
+    <div class="form-container">
+      <div class="form-heading"><h1 class="form-title" dir="ltr">Demo form</h1>
+        <span class="required-asterisk" aria-hidden="true">* Required</span>
+      </div>
+    <div class="form-content">
+      <form id="upload_form" onsubmit="formSubmit(this)">
+      
+        <div class="form-group">
+          <label for="q_name">
+            <div class="q-title">What's Your Name?</div>
+            <label for="q_name" aria-label="(Required field)"></label>
+            <span class="required-asterisk">*</span>
+            <div class="q-desc"></div>
+          </label>
+          <input type="text" name="q_name" id="q_name" value="" placeholder="Mr. Wayne" aria-label="What's Your Name?" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="q_heap">
+            <div class="q-title">How Much Is A Heap?</div>
+            <label for="q_heap" aria-label="(Required field)"></label>
+            <span class="required-asterisk">*</span>
+            <div class="q-desc">Measured in grains of sand</div>
+          </label>
+          <input type="number" name="q_heap" id="q_heap" value="" aria-label="How Much Is A Heap?" step="any" min="0" required>
+        </div>
+
+        <div class="form-group">
+          <label for="q_mirror">
+            <div class="q-title">What Color Is A Mirror?</div>
+            <label for="q_number" aria-label="(Required field)"></label>
+            <span class="required-asterisk">*</span>
+            <div class="q-desc"></div>
+          </label>
+          
+          <select name="q_mirror" id="q_mirror" aria-label="What Color Is A Mirror?" required>
+            <option value=""></option>
+            <option value="White">White</option>
+            <option value="Silver">Silver</option>
+            <option value="Black">Black</option>
+            <option value="Green">Green</option>
+            <option value="No color">No color</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="q_world">
+            <div class="q-title">What Is The Age Of The World?</div>
+            <label for="q_world" aria-label="(Required field)"></label>
+            <span class="required-asterisk">*</span>
+            <div class="q-desc"></div>
+          </label>
+        
+          <table border="0" cellpadding="5" cellspacing="0" id="q_world">
+            <tr aria-hidden="true">
+              <td class="scale-label" align="center"><label for="q_world_1">2000 years</label></td>
+              <td class="scale-label" align="center"><label for="q_world_2">5000 years</label></td>
+              <td class="scale-label" align="center"><label for="q_world_3">200,000 years</label></td>
+              <td class="scale-label" align="center"><label for="q_world_4">4.543 billion years</label></td>
+              <td class="scale-label" align="center"><label for="q_world_5">14 billion years</label></td>
+            </tr>
+            <tr role="radiogroup" aria-label="What Is The Age Of The World?">
+              <td style="width: 20%;"><div align="center"><input type="radio" name="q_world" id="q_world_1" value="2000 years" role="radio" aria-label="2000 years" required></div></td>
+              <td style="width: 20%;"><div align="center"><input type="radio" name="q_world" id="q_world_2" value="5000 years" role="radio" aria-label="5000 years"></div></td>
+              <td style="width: 20%;"><div align="center"><input type="radio" name="q_world" id="q_world_3" value="200,000 years" role="radio" aria-label="200,000 years"></div></td>
+              <td style="width: 20%;"><div align="center"><input type="radio" name="q_world" id="q_world_4" value="4.543 billion years" role="radio" aria-label="4.543 billion years"></div></td>
+              <td style="width: 20%;"><div align="center"><input type="radio" name="q_world" id="q_world_5" value="14 billion years" role="radio" aria-label="14 billion years"></div></td>
+            </tr>
+          </table>
+        </div>
+        
+        <div class="form-group">
+          <label for="q_clod">
+            <div class="q-title">How Much Does A Cloud Weigh?</div>
+            <div class="q-desc"></div>
+          </label>
+          <textarea name="q_cloud" id="q_cloud" rows="8" cols="0" dir="auto" aria-label="How Much Does A Cloud Weigh?" ></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="q_image">
+            <div class="q-title">Upload Nice Pic</div>
+            <div class="q-desc"></div>
+          </label>
+          
+          <div class="upload">
+            <input type="file" name="q_image" accept="image/*"  id="q_image" title="Choose a file to upload">
+            <div class="button"><span>Choose file</span></div>
+            <label for="q_image">No file chosen</label>
+          </div>
+        </div>
+
+        <input type="submit" class="action" value="Submit">
+      </form>
+      </div>
+      <div class="form-footer">
+      <span>Demo form<br>
+        Address: Main Street, 1, Anytown<br>
+        Web: <a href="example.com">example.com</a><br>
+        Tel: 000 000 007
+      </span>
+    </div>
+    </div>
+    <?!= include('Scripts.html'); ?>
+  </body>
+</html>
+
+
