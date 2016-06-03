@@ -1,0 +1,67 @@
+<script>
+(function(e,t,n){
+  var r=e.querySelectorAll("html")[0];
+  r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);
+
+/*
+	By Osvaldas Valutis, www.osvaldas.info
+	Available for use under the MIT License
+*/
+
+//this script was modified for that particular form demonstration
+
+'use strict';
+
+
+
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.upload input' );
+    
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+                
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));
+
+
+function preventSubmit() {
+  var frm = document.getElementById('upload_form');
+  
+  frm.addEventListener('submit', function(event) {
+            event.preventDefault();
+          }, false);
+}
+window.addEventListener('load', preventSubmit);
+
+function formSubmit(formObject) {
+  document.getElementsByClassName("required-asterisk")[0].style.display = "none";
+  document.getElementsByClassName("form-content")[0].innerHTML = 'Sending...';
+  google.script.run.withSuccessHandler(onSuccess).withFailureHandler(onFailure).uploadFiles(formObject);
+}
+
+function onSuccess(respond) {
+  document.getElementsByClassName("form-content")[0].innerHTML = respond;
+}
+
+function onFailure(respond) {
+  document.getElementsByClassName("form-content")[0].innerHTML = respond;
+}
+
+</script>
