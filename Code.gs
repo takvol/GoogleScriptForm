@@ -38,8 +38,11 @@ function uploadFiles(form) {
       //image will only be displayed in sheet if it's folder is shared to anyone on the web
     }
     
+    var lock = LockService.getScriptLock();
+    lock.tryLock(30000);//wait 30 sec if locked to prevent concurrency
     row = sheet.getSheetByName(SHEET_NAME).appendRow([date, id, name, heap, mirror, world, cloud, url, image]).getLastRow();
     sheet.getSheetByName(SHEET_NAME).setRowHeight(row, 100);
+    lock.releaseLock();
     
     respond = "Thanks! Your response has been recorded.";
   } catch(e) {
